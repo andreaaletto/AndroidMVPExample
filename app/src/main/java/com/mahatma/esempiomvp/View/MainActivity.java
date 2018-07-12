@@ -45,14 +45,14 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
         this.getNameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.requestName();
+                getNameCallback();
             }
         });
 
         this.setNameButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                presenter.storeNewName(newNameEditText.getText().toString());
+                setNameCallback();
             }
         });
     }
@@ -67,5 +67,13 @@ public class MainActivity extends AppCompatActivity implements Contract.View {
         if(toast != null) toast.cancel();
         toast = Toast.makeText(this, newNameEditText.getText().toString() + " stored succesfully", Toast.LENGTH_SHORT);
         toast.show();
+    }
+
+    private void getNameCallback(){
+        presenter.requestName();
+    }
+
+    private void setNameCallback(){
+        presenter.storeNewName(newNameEditText.getText().toString());
     }
 }

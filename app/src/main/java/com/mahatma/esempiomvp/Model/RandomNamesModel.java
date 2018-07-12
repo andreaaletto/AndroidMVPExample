@@ -7,9 +7,6 @@ public class RandomNamesModel {
 
     private ArrayList<String> names;
 
-    public RandomNamesModel(){
-        names = new ArrayList<>();
-    }
     public RandomNamesModel(ArrayList<String> names){
         this.names = names;
     }
