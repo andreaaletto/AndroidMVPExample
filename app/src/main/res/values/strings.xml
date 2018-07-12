@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">EsempioMVP</string>
+    <string name="random_name">Random names generator</string>
+    <string name="btn_title_get">Tell me a name!</string>
+    <string name="btn_title_set">Save this name!</string>
+    <string name="insert_new_name">Insert new name</string>
 </resources>
